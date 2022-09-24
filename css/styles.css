@@ -437,3 +437,42 @@ img {
     width: 60%;
 }
 
+.skills__node {
+    width: 80%;
+}
+
+.skills__mongo {
+    width: 60%;
+}
+
+.skills__express {
+    width: 70%;
+}
+
+.skills__figma {
+    width: 90%;
+}
+
+.skills__sketch {
+    width: 60%;
+}
+
+.skills__photoshop {
+    width: 80%;
+}
+
+.skills__close .skills__list {
+    height: 0;
+    overflow: hidden;
+}
+
+.skills__open .skills__list {
+    height: max-content;
+    margin-bottom: var(--mb-2-5);
+}
+
+/* arrow doesn`t work */
+.skills__open .skills__arrow { 
+    transform: rotate(-180deg);
+}
+
