@@ -31,14 +31,14 @@ const skillsContent = document.getElemementsByClassName('skills__content'),
     function toggleSkills(){
         let itemClass = this.parentNode.className
 
-        for(i = 0; i < skillsContent.length; i++){
+        for(i = 0; i < skillsContent.length; i++) {
             skillsContent[i].className = 'skills__content skills__close'
         }
-        if(itemClass === 'skills__content skills__close'){
+        if(itemClass === 'skills__content skills__close') {
             this.parentNode.className = 'skills__content skills__open'
         }
     }
 
-    skillsHeader.forEach((el) => {
+    skillsHeader.forEach((el) =>{
         el.addEventListener('click', toggleSkills)
     })
