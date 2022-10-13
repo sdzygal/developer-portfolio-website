@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <linl rel="stylesheet" href="css/swiper-bundle.min.css"
     <link rel="stylesheet" href="css/styles.css">
     <title>Web Developer Website</title>
 </head>
@@ -431,11 +432,10 @@
     <h2 class="section__title">Portfolio</h2>
     <span class="section__subtitle">Recent works</span>
 
-    <div class="portfolio__container container">
-        <div>
-            <div class="portfolio__content grid">
+    <div class="portfolio__container container swiper-container">
+        <div class="swiper-wrapper">
+            <div class="portfolio__content grid swiper-slide">
                 <img src="img/..." alt="" class="portfolio__img">
-
                 <div class="portfolio__data">
                     <h3 class="portfolio__title">Content Bootcamp Website</h3>
                     <p class="portfolio__description">
@@ -443,14 +443,48 @@
                     </p>
                     <a href="#" class="button button--flex button--small portfolio__button">
                         Demo
+                        <i class="uil uil-arrow-right button-icon"></i>
                     </a>
                 </div>
             </div>
+
+            <div class="portfolio__content grid swiper-slide">
+                <img src="img/..." alt="" class="portfolio__img">
+            <div class="portfolio__data">
+                <h3 class="portfolio__title">Something Else</h3>
+                <p class="portfolio__description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error in architecto velit. Illum delectus aliquid reprehenderit ad excepturi facilis, in tempora blanditiis aliquam earum, fugit iusto perspiciatis, debitis voluptates! Et!
+                </p>
+                <a href="#" class="button button--flex button--small portfolio__button">
+                    Demo
+                    <i class="uil uil-arrow-right button-icon"></i>
+                </a>
+            </div>
         </div>
+
+        <div class="portfolio__content grid swiper-slide">
+            <img src="img/..." alt="" class="portfolio__img">
+        <div class="portfolio__data">
+            <h3 class="portfolio__title">Something Else 2</h3>
+            <p class="portfolio__description">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error in architecto velit. Illum delectus aliquid reprehenderit ad excepturi facilis, in tempora blanditiis aliquam earum, fugit iusto perspiciatis, debitis voluptates! Et!
+            </p>
+            <a href="#" class="button button--flex button--small portfolio__button">
+                Demo
+                <i class="uil uil-arrow-right button-icon"></i>
+            </a>
+        </div>
+            </div>
+        </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        <div class="swiper-pagination"></div>    
     </div>
 </section>
 
-
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
