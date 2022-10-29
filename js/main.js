@@ -98,6 +98,25 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
     
   });
 
+  function sendEmail() {
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "sdzygal@gmail.com",
+        Password : "EK*YK45hTa2I9nl#m",
+        To : 'sdzygal@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact Form Message",
+        Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Project: " + document.getElementById("project").value
+        + "<br> Message: " + document.getElementById("message").value
+    }).then(
+      message => alert("Message Sent Succesfully")
+    );
+}
+
+form.addEventListener('submit', reset)
+
   const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
