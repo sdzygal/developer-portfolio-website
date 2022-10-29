@@ -97,27 +97,9 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
     }
     
   });
+ 
 
-  function sendEmail() {
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "sdzygal@gmail.com",
-        Password : "EK*YK45hTa2I9nl#m",
-        To : 'sdzygal@gmail.com',
-        From : document.getElementById("email").value,
-        Subject : "New Contact Form Message",
-        Body : "Name: " + document.getElementById("name").value
-        + "<br> Email: " + document.getElementById("email").value
-        + "<br> Project: " + document.getElementById("project").value
-        + "<br> Message: " + document.getElementById("message").value
-    }).then(
-      message => alert("Message Sent Succesfully")
-    );
-}
-
-form.addEventListener('submit', reset)
-
-  const sections = document.querySelectorAll('section[id]')
+ const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
     const scrollY = window.pageYOffset
@@ -171,12 +153,33 @@ if (selectedTheme) {
   themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
 }
 
-// Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
+     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
+
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+
+let form = document.querySelector('.contact__form')
+
+form.addEventListener('submit', () => {
+  function sendEmail() {
+      Email.send({
+          Host : "smtp.gmail.com",
+          Username : "sdzygal@gmail.com",
+          Password : "EK*3F54B81A80BA3BD0139FE235CED5F205897F#m",
+          To : 'sdzygal@gmail.com',
+          From : document.getElementById("email").value,
+          Subject : "New Contact Form Message",
+          Body : "Name: " + document.getElementById("name").value
+          + "<br> Email: " + document.getElementById("email").value
+          + "<br> Project: " + document.getElementById("project").value
+          + "<br> Message: " + document.getElementById("message").value
+      }).then(
+        message => alert("Message Sent Succesfully")
+      );
+  }
+  
 })
